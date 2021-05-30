@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+black = "*"
+
+[packages]
+django = "*"
+django-filter = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+djangorestframework-simplejwt = "*"
+django-url-filter = "*"
+cloudinary = "*"
+drf-yasg = {extras = ["validation"], version = "*"}
+psycopg2-binary = "*"
+pillow = "*"
+django-rest-swagger = "*"
+whitenoise = "*"
+faker = "*"
+gunicorn = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true

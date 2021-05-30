@@ -1,0 +1,4397 @@
+{
+	"info": {
+		"_postman_id": "68d7d725-11f1-4747-a6bb-83105b431cbf",
+		"name": "eyeco",
+		"description": "# Eyeco rest api\n\n- base_url :  http://161.35.223.149:8000\n\n- Toutes les endpoints doivent se terminer par un slash à la fin ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "utilisateurs",
+			"item": [
+				{
+					"name": "Création de compte",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"likee\",\n    \"email\":\"likee@likee.com\",\n    \"password\":\"pass\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/sign-up/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"sign-up",
+								""
+							]
+						},
+						"description": "Cet endpoint permet de créer un compte"
+					},
+					"response": [
+						{
+							"name": "Création de compte avec username, email et password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"kardak\",\n    \"email\":\"kardak@gmail.com\",\n    \"password\":\"pass\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/auth/sign-up/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"sign-up",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 06:57:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "456"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 70,\n        \"username\": \"kardak\",\n        \"profession\": null,\n        \"first_name\": \"6\",\n        \"last_name\": \"6\",\n        \"phone\": \"6\",\n        \"email\": \"kardak@gmail.com\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"avatar\": null,\n        \"city\": null,\n        \"longitude\": null,\n        \"latitude\": null,\n        \"age\": \"\",\n        \"networks\": []\n    },\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMjUwLCJqdGkiOiJlZjU4ZjFmOGQwZjY0ZjQ4OTVmMzVmYjJkMTRhODFkMSIsInVzZXJfaWQiOjcwfQ.FFqC8C023k3zvUYQRMBewVjfZfJxnQmg1hfqKmOwx5M\"\n}"
+						},
+						{
+							"name": "Création de compte avec nom et prenom email et phone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\":\"fn\",\n    \"last_name\":\"ln\",\n    \"phone\":\"0987\",\n    \"email\":\"jekyll@gmail.com\",\n    \"password\":\"pass\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/auth/sign-up/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"sign-up",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 06:55:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "456"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 68,\n        \"username\": \"4\",\n        \"profession\": null,\n        \"first_name\": \"fn\",\n        \"last_name\": \"ln\",\n        \"phone\": \"0987\",\n        \"email\": \"jekyll@gmail.com\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"avatar\": null,\n        \"city\": null,\n        \"longitude\": null,\n        \"latitude\": null,\n        \"age\": \"\",\n        \"networks\": []\n    },\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMTM5LCJqdGkiOiI0NjM5NzE1MzY2M2M0NmUyYWI2MGUyYmZkODI2YThmNyIsInVzZXJfaWQiOjY4fQ.1YFKp0cOkEUZyn8kbgDqlEJOXaDg7NnWIMaq-NRj5O8\"\n}"
+						},
+						{
+							"name": "Création de compte avec nom et prenom mais sans telephone",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"first_name\":\"fn1\",\n    \"last_name\":\"ln1\",\n    \"email\":\"jekyll2@gmail.com\",\n    \"password\":\"pass\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/auth/sign-up/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"sign-up",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 06:56:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "456"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 69,\n        \"username\": \"5\",\n        \"profession\": null,\n        \"first_name\": \"fn1\",\n        \"last_name\": \"ln1\",\n        \"phone\": \"5\",\n        \"email\": \"jekyll2@gmail.com\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"avatar\": null,\n        \"city\": null,\n        \"longitude\": null,\n        \"latitude\": null,\n        \"age\": \"\",\n        \"networks\": []\n    },\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMTg1LCJqdGkiOiI5MjE5OWQ0YjZhM2I0MzFiOTJlMzcxNzI1NzRiMzUxNSIsInVzZXJfaWQiOjY5fQ.U20UahrM2tCs9OnF_eoQcOq2UIa6xWo1X1cbklfFL9s\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Connection avec email ou phone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailOrPhone\":\"1234562273\",\n    \"password\":\"23ERZTgy\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/sign-in/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"sign-in",
+								""
+							]
+						},
+						"description": "Connection à l'API"
+					},
+					"response": [
+						{
+							"name": "Connection réussie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"emailOrPhone\":\"1234562273\",\n    \"password\":\"23ERZTgy\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/auth/sign-in/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"sign-in",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 13:23:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "371"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "csrftoken=hKfpmNVpRH39LwQIufOPfFphljq4cQhwz9jC0xLt0m6liB7fMAWevB2hGiwUI7IY; expires=Sat, 26 Feb 2022 13:23:38 GMT; Max-Age=31449600; Path=/; SameSite=Lax"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "sessionid=aerlfo0od5816ontw1u4nild7v9ezlhe; expires=Sat, 13 Mar 2021 13:23:38 GMT; HttpOnly; Max-Age=1209600; Path=/; SameSite=Lax"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 8,\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"phone\": \"1234562273\",\n        \"email\": \"john@gmail.com\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"avatar\": null,\n        \"city\": null\n    },\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDQ3MjE4LCJqdGkiOiIzZTNlNmI3YzIyNWM0YjcyOWI1ZjY2Nzg5YzQwMjViOSIsInVzZXJfaWQiOjh9.uqN7BDNDTd6IRcWLEXKy7KLtXzoIJWAPMqNTelmtZsk\"\n}"
+						},
+						{
+							"name": "Echec de la connection : le statut de la requête est à 400",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"emailOrPhone\":\"12345622ee73\",\n    \"password\":\"23ERZTgy\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/auth/sign-in/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"sign-in",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 13:24:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"non_field_errors\": [\n        \"Unable to log in with provided credentials.\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Mot de passe oublié : réinitialisation de mot de passe",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"kayode.adechinan@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/reset-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password",
+								""
+							]
+						},
+						"description": "Endpoint pour la gestion du mot de passe oublié"
+					},
+					"response": [
+						{
+							"name": "Mot de passe oublié : réinitialisation de mot de passe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"kayode.adechinan@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/auth/reset-password/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"reset-password",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 13:40:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"check your email\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Mettre à jour le mot de passe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDU4MTI2LCJqdGkiOiI4Y2IwNzdkZDI1OGY0ZTIzYWY2NzZhMjc5OWU3ZjI0OSIsInVzZXJfaWQiOjEzfQ.Kf7vfl8uGWNsgsG_vB_MviiX0whN0oELnFzCsK6uNKg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"password\":\"coco\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth/change-password/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change-password",
+								""
+							]
+						},
+						"description": "Il s'agit de mettre à jour une des infos d'un utilisateur comme son mot de passe"
+					},
+					"response": [
+						{
+							"name": "Mettre à jour le mot de passe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"password\":\"coco\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/auth/change-password/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"change-password",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 18:14:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"your new password is set\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Mettre à jour une info de profil",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDYzNDQwLCJqdGkiOiJjN2U4YWIwYzVhOGE0OTUzYjNmYWZjNjA3NjExMTRmZCIsInVzZXJfaWQiOjE0fQ.B-UMTw7IVefb0fu9NKO3IsMpkINnynv5BqzaieK2nOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"first_name\": \"papa@papa.papa updated!\",\n        \"last_name\": \"papa@papa.papa\",\n        \"bio\": \"ma bio\",\n        \"birthday\": \"2021-02-27\",\n        \"avatar\": \"https://static.hollywoodreporter.com/sites/default/files/2019/03/avatar-publicity_still-h_2019-compressed.jpg\",\n        \"city\": \"idaho\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								""
+							]
+						},
+						"description": "Mettre par jour par exemple, la bio, la profession, le birthdate, city ... voir l'exemple"
+					},
+					"response": [
+						{
+							"name": "Mettre à jour une info de profil",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n        \"first_name\": \"papa@papa.papa updated!\",\n        \"last_name\": \"papa@papa.papa\",\n        \"bio\": \"ma bio\",\n        \"birthday\": \"2021-02-27\",\n        \"avatar\": \"https://static.hollywoodreporter.com/sites/default/files/2019/03/avatar-publicity_still-h_2019-compressed.jpg\",\n        \"city\": \"idaho\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 19:07:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 14,\n    \"first_name\": \"papa@papa.papa updated!\",\n    \"last_name\": \"papa@papa.papa\",\n    \"phone\": \"44444\",\n    \"email\": \"papa@papa.papa\",\n    \"bio\": \"ma bio\",\n    \"birthday\": \"2021-02-27\",\n    \"avatar\": \"https://static.hollywoodreporter.com/sites/default/files/2019/03/avatar-publicity_still-h_2019-compressed.jpg\",\n    \"city\": \"idaho\",\n    \"longitude\": null,\n    \"latitude\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Mettre à jour sa date de naissance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMjUwLCJqdGkiOiJlZjU4ZjFmOGQwZjY0ZjQ4OTVmMzVmYjJkMTRhODFkMSIsInVzZXJfaWQiOjcwfQ.FFqC8C023k3zvUYQRMBewVjfZfJxnQmg1hfqKmOwx5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n       \n        \"birthday\": \"1993-07-05\"\n      \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								""
+							]
+						},
+						"description": "Mettre à jour sa date de naissance selon ce format :\n\nANNEE-MOIS-JOUR\n\nExemple :\n1993-07-05  -> 05 juillet 1993"
+					},
+					"response": [
+						{
+							"name": "Mettre à jour sa date de naissance",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n       \n        \"birthday\": \"1993-07-05\"\n      \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 07:10:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "236"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 70,\n    \"username\": \"kardak\",\n    \"profession\": null,\n    \"first_name\": \"6\",\n    \"last_name\": \"6\",\n    \"phone\": \"6\",\n    \"email\": \"kardak@gmail.com\",\n    \"bio\": null,\n    \"birthday\": \"1993-07-05\",\n    \"avatar\": null,\n    \"city\": null,\n    \"longitude\": null,\n    \"latitude\": null,\n    \"age\": 27,\n    \"networks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les infos de l'utilisateur en cours",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMjUwLCJqdGkiOiJlZjU4ZjFmOGQwZjY0ZjQ4OTVmMzVmYjJkMTRhODFkMSIsInVzZXJfaWQiOjcwfQ.FFqC8C023k3zvUYQRMBewVjfZfJxnQmg1hfqKmOwx5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								""
+							]
+						},
+						"description": "Récupérer les infos d'un utilisateur"
+					},
+					"response": [
+						{
+							"name": "Récupérer les infos de l'utilisateur en cours",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 07:20:39 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "401"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 70,\n    \"username\": \"kardak\",\n    \"profession\": null,\n    \"first_name\": \"6\",\n    \"last_name\": \"6\",\n    \"phone\": \"6\",\n    \"email\": \"kardak@gmail.com\",\n    \"bio\": null,\n    \"birthday\": \"1993-07-05\",\n    \"avatar\": null,\n    \"city\": null,\n    \"longitude\": null,\n    \"latitude\": null,\n    \"age\": 27,\n    \"networks\": [\n        {\n            \"id\": 1,\n            \"network\": 1,\n            \"identifier\": \"senderfacebook\",\n            \"created_date\": \"2021-03-02T07:20:00.128387Z\",\n            \"updated_date\": \"2021-03-02T07:20:00.128414Z\",\n            \"networkInfo\": \"facebook\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Mettre à jour la géolocalisation de l'utilisateur courant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDYzNDQwLCJqdGkiOiJjN2U4YWIwYzVhOGE0OTUzYjNmYWZjNjA3NjExMTRmZCIsInVzZXJfaWQiOjE0fQ.B-UMTw7IVefb0fu9NKO3IsMpkINnynv5BqzaieK2nOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"longitude\": \"-77.02303\",\n    \"latitude\": \"-38.70734\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"me",
+								""
+							]
+						},
+						"description": "Mettre à jour la géolocalisation de l'utilisateur courant"
+					},
+					"response": [
+						{
+							"name": "Mettre à jour la géolocalisation de l'utilisateur courant",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"longitude\": \"-77.02303\",\n    \"latitude\": \"-38.70734\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 19:13:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "340"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 14,\n    \"first_name\": \"papa@papa.papa updated!\",\n    \"last_name\": \"papa@papa.papa\",\n    \"phone\": \"44444\",\n    \"email\": \"papa@papa.papa\",\n    \"bio\": \"ma bio\",\n    \"birthday\": \"2021-02-27\",\n    \"avatar\": \"https://static.hollywoodreporter.com/sites/default/files/2019/03/avatar-publicity_still-h_2019-compressed.jpg\",\n    \"city\": \"idaho\",\n    \"longitude\": \"-77.02303\",\n    \"latitude\": \"-38.70734\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer tous les utilisateurs proches de moi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDc5MzI5LCJqdGkiOiIxMDA5ZDQ3YzgyNTM0YWZkODZiNjM3YzY4MWFhNWEyMSIsInVzZXJfaWQiOjE2fQ.9V6ghbgJyHySAHFeSdnRA-IFXw25qutTIkqWQnI-nBA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users?long=-80.191788&lat=25.761681",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "long",
+									"value": "-80.191788"
+								},
+								{
+									"key": "lat",
+									"value": "25.761681"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer tous les utilisateurs proche de moi ",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/users?long=-80.191788&lat=25.761681",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users"
+									],
+									"query": [
+										{
+											"key": "long",
+											"value": "-80.191788"
+										},
+										{
+											"key": "lat",
+											"value": "25.761681"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 00:11:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3919"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 16,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 6,\n            \"first_name\": \"joe\",\n            \"last_name\": \"resing\",\n            \"phone\": \"123\",\n            \"email\": \"eeee@eee.eee222\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1888305\",\n            \"latitude\": \"25.7741593\",\n            \"distance\": \"1418.78011056 m\"\n        },\n        {\n            \"id\": 17,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"phone\": \"999999999999999999999999\",\n            \"email\": \"cosmos@cosmos.cosmos\",\n            \"bio\": \"\",\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1888075\",\n            \"latitude\": \"25.7744306\",\n            \"distance\": \"1448.76912128 m\"\n        },\n        {\n            \"id\": 9,\n            \"first_name\": \"potomac1993@gmail.com\",\n            \"last_name\": \"potomac1993@gmail.com\",\n            \"phone\": \"1234\",\n            \"email\": \"potomac1993@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1888075\",\n            \"latitude\": \"25.7744306\",\n            \"distance\": \"1448.76912128 m\"\n        },\n        {\n            \"id\": 4,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"phone\": \"123456227\",\n            \"email\": \"user1@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.188012\",\n            \"latitude\": \"25.7753719\",\n            \"distance\": \"1568.61611929 m\"\n        },\n        {\n            \"id\": 7,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"phone\": \"122\",\n            \"email\": \"eee@eee.yyyy\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1740071\",\n            \"latitude\": \"25.7853013\",\n            \"distance\": \"3173.06519751 m\"\n        },\n        {\n            \"id\": 16,\n            \"first_name\": \"Johny\",\n            \"last_name\": \"Doe\",\n            \"phone\": \"12345662273\",\n            \"email\": \"johny@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1940194\",\n            \"latitude\": \"25.8101674\",\n            \"distance\": \"5396.07611791 m\"\n        },\n        {\n            \"id\": 11,\n            \"first_name\": \"toto\",\n            \"last_name\": \"toto\",\n            \"phone\": \"123445\",\n            \"email\": \"toto@toto.toto\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1940194\",\n            \"latitude\": \"25.8101674\",\n            \"distance\": \"5396.07611791 m\"\n        },\n        {\n            \"id\": 10,\n            \"first_name\": \"kayode.adechinan@gmail.com\",\n            \"last_name\": \"kayode.adechinan@gmail.com\",\n            \"phone\": \"12341222\",\n            \"email\": \"kayode.adechinan@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1940194\",\n            \"latitude\": \"25.8101674\",\n            \"distance\": \"5396.07611791 m\"\n        },\n        {\n            \"id\": 12,\n            \"first_name\": \"caca@caca.caca\",\n            \"last_name\": \"caca@caca.caca\",\n            \"phone\": \"12345678\",\n            \"email\": \"caca@caca.caca\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.2420384\",\n            \"latitude\": \"25.7286438\",\n            \"distance\": \"6231.02477228 m\"\n        },\n        {\n            \"id\": 14,\n            \"first_name\": \"papa@papa.papa updated!\",\n            \"last_name\": \"papa@papa.papa\",\n            \"phone\": \"44444\",\n            \"email\": \"papa@papa.papa\",\n            \"bio\": \"ma bio\",\n            \"birthday\": \"2021-02-27\",\n            \"avatar\": \"https://static.hollywoodreporter.com/sites/default/files/2019/03/avatar-publicity_still-h_2019-compressed.jpg\",\n            \"city\": \"idaho\",\n            \"longitude\": \"-80.1871658\",\n            \"latitude\": \"25.8327549\",\n            \"distance\": \"7916.60378108 m\"\n        },\n        {\n            \"id\": 15,\n            \"first_name\": \"kodjo@kodjo.kodjo\",\n            \"last_name\": \"kodjo@kodjo.kodjo\",\n            \"phone\": \"12345678098\",\n            \"email\": \"kodjo@kodjo.kodjo\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.2854811\",\n            \"latitude\": \"25.7639185\",\n            \"distance\": \"9385.95150556 m\"\n        },\n        {\n            \"id\": 2,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"phone\": \"12345\",\n            \"email\": \"kotano@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.2854811\",\n            \"latitude\": \"25.7639185\",\n            \"distance\": \"9385.95150556 m\"\n        },\n        {\n            \"id\": 3,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"phone\": \"1234567\",\n            \"email\": \"nanatou@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1958809\",\n            \"latitude\": \"25.8478742\",\n            \"distance\": \"9593.01369539 m\"\n        },\n        {\n            \"id\": 8,\n            \"first_name\": \"John\",\n            \"last_name\": \"Doe\",\n            \"phone\": \"1234562273\",\n            \"email\": \"john@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1958809\",\n            \"latitude\": \"25.8478742\",\n            \"distance\": \"9593.01369539 m\"\n        },\n        {\n            \"id\": 13,\n            \"first_name\": \"roni@roni.roni\",\n            \"last_name\": \"roni@roni.roni\",\n            \"phone\": \"1234333333\",\n            \"email\": \"roni@roni.roni\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1958809\",\n            \"latitude\": \"25.8478742\",\n            \"distance\": \"9593.01369539 m\"\n        },\n        {\n            \"id\": 5,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"phone\": \"233\",\n            \"email\": \"eeee@eee.eee\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": \"-80.1958809\",\n            \"latitude\": \"25.8478742\",\n            \"distance\": \"9593.01369539 m\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer tous les utilisateurs sans géolocalisation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMjUwLCJqdGkiOiJlZjU4ZjFmOGQwZjY0ZjQ4OTVmMzVmYjJkMTRhODFkMSIsInVzZXJfaWQiOjcwfQ.FFqC8C023k3zvUYQRMBewVjfZfJxnQmg1hfqKmOwx5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						},
+						"description": "En gros on récupère tous les utilisateurs; \nVoir la requête précédente pour récupérer les plus proches"
+					},
+					"response": [
+						{
+							"name": "Récupérer tous les utilisateurs sans géolocalisation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 07:28:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1587"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 6,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"username\": \"1\",\n            \"profession\": null,\n            \"first_name\": \"Jojkkdjjjjjeeeejjeeeherny\",\n            \"last_name\": \"Dodkeeeeejjjjjekjjje\",\n            \"phone\": \"133333jdj3ejjkkk3\",\n            \"email\": \"johny@gseeedmjjjjjjkkeekail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null,\n            \"age\": \"\",\n            \"networks\": []\n        },\n        {\n            \"id\": 34,\n            \"username\": \"2\",\n            \"profession\": null,\n            \"first_name\": \"Jojkkdjjpperny\",\n            \"last_name\": \"Dodkeeeeejjpjjje\",\n            \"phone\": \"133333jdjpkk3\",\n            \"email\": \"johny@gkjjjjkkeekail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null,\n            \"age\": \"\",\n            \"networks\": []\n        },\n        {\n            \"id\": 67,\n            \"username\": \"3\",\n            \"profession\": null,\n            \"first_name\": \"Jojkkdjjpjjperny\",\n            \"last_name\": \"Dodkeejjeeejjpjjje\",\n            \"phone\": \"133333jdjjjpkk3\",\n            \"email\": \"johny@gkjjjjjjkkeekail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null,\n            \"age\": \"\",\n            \"networks\": []\n        },\n        {\n            \"id\": 68,\n            \"username\": \"4\",\n            \"profession\": null,\n            \"first_name\": \"fn\",\n            \"last_name\": \"ln\",\n            \"phone\": \"0987\",\n            \"email\": \"jekyll@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null,\n            \"age\": \"\",\n            \"networks\": []\n        },\n        {\n            \"id\": 69,\n            \"username\": \"5\",\n            \"profession\": null,\n            \"first_name\": \"fn1\",\n            \"last_name\": \"ln1\",\n            \"phone\": \"5\",\n            \"email\": \"jekyll2@gmail.com\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null,\n            \"age\": \"\",\n            \"networks\": []\n        },\n        {\n            \"id\": 100,\n            \"username\": \"eyeco\",\n            \"profession\": null,\n            \"first_name\": \"\",\n            \"last_name\": \"\",\n            \"phone\": null,\n            \"email\": \"eyeco@eyeco.eyeco\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null,\n            \"age\": \"\",\n            \"networks\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les infos d'un utilisateur quelconque (autre que moi)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMjUwLCJqdGkiOiJlZjU4ZjFmOGQwZjY0ZjQ4OTVmMzVmYjJkMTRhODFkMSIsInVzZXJfaWQiOjcwfQ.FFqC8C023k3zvUYQRMBewVjfZfJxnQmg1hfqKmOwx5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/users/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer les infos d'un utilisateur quelconque",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/users/1/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 07:23:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "296"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"username\": \"1\",\n    \"profession\": null,\n    \"first_name\": \"Jojkkdjjjjjeeeejjeeeherny\",\n    \"last_name\": \"Dodkeeeeejjjjjekjjje\",\n    \"phone\": \"133333jdj3ejjkkk3\",\n    \"email\": \"johny@gseeedmjjjjjjkkeekail.com\",\n    \"bio\": null,\n    \"birthday\": null,\n    \"avatar\": null,\n    \"city\": null,\n    \"longitude\": null,\n    \"latitude\": null,\n    \"age\": \"\",\n    \"networks\": []\n}"
+						}
+					]
+				}
+			],
+			"description": "# Endpoints relatifs aux utilisateurs"
+		},
+		{
+			"name": "uploads",
+			"item": [
+				{
+					"name": "envoyer un fichier image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/cosmos/Pictures/Selection_018.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/files/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"files",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "envoyer un fichier image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/cosmos/Pictures/Selection_018.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/files/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"files",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 19:20:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Location",
+									"value": "http://res.cloudinary.com/dkc7uggjy/image/upload/v1614453607/wgmybrmvlzykbcpggy5o.png"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "192"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"url\": \"http://res.cloudinary.com/dkc7uggjy/image/upload/v1614453607/wgmybrmvlzykbcpggy5o.png\",\n    \"created_date\": \"2021-02-27T19:20:07.897826Z\",\n    \"updated_date\": \"2021-02-27T19:20:07.897850Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "envoyer un fichier video",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/cosmos/Downloads/mov_bbb.mp4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/files/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"files",
+								""
+							]
+						},
+						"description": "Envoyer un fichier video"
+					},
+					"response": [
+						{
+							"name": "envoyer un fichier video",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/cosmos/Downloads/mov_bbb.mp4"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/files/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"files",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 19:30:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Location",
+									"value": "http://res.cloudinary.com/dkc7uggjy/raw/upload/v1614454207/x9hn8xmfpnqlllanowmi.mp4"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"url\": \"http://res.cloudinary.com/dkc7uggjy/raw/upload/v1614454207/x9hn8xmfpnqlllanowmi.mp4\",\n    \"created_date\": \"2021-02-27T19:30:07.563174Z\",\n    \"updated_date\": \"2021-02-27T19:30:07.563236Z\"\n}"
+						}
+					]
+				}
+			],
+			"description": "# Endpoints relatifs à l'upload de fichier\n\n\n- image\n- video"
+		},
+		{
+			"name": "stories",
+			"item": [
+				{
+					"name": "Créer une storie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3Mjc2LCJqdGkiOiI5NmMwY2NiODkwNDE0ZTI4YTM1ZmI4YmJiMzg0NTg1ZSIsInVzZXJfaWQiOjF9.6rawAGKbeYtWS2c8JyAzOKuqOTmSZpol6kLz5dHrC2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"text\":\"Memento mori 2\",\n    \"media\":\"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n    \"isVideo\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/stories/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Créer une storie",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"text\":\"Memento mori 2\",\n    \"media\":\"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n    \"isVideo\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/stories/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"stories",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 22:49:51 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "261"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 34,\n    \"text\": \"Memento mori 2\",\n    \"media\": \"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n    \"isVideo\": false,\n    \"created_date\": \"2021-02-28T22:49:51.038641Z\",\n    \"updated_date\": \"2021-02-28T22:49:51.038661Z\",\n    \"userInfo\": \"In Your Localstorage\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve my stories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDYzNDQwLCJqdGkiOiJjN2U4YWIwYzVhOGE0OTUzYjNmYWZjNjA3NjExMTRmZCIsInVzZXJfaWQiOjE0fQ.B-UMTw7IVefb0fu9NKO3IsMpkINnynv5BqzaieK2nOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/stories/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stories",
+								"me",
+								""
+							]
+						},
+						"description": "Retrieve my stories"
+					},
+					"response": [
+						{
+							"name": "Retrieve my stories",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/stories/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"stories",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 20:19:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "539"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 2,\n            \"text\": \"Memento mori 2\",\n            \"media\": \"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n            \"created_date\": \"2021-02-27T20:02:15.704796Z\",\n            \"updated_date\": \"2021-02-27T20:02:15.704813Z\",\n            \"userInfo\": \"In Your Localstorage\"\n        },\n        {\n            \"id\": 1,\n            \"text\": \"Memento mori\",\n            \"media\": \"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n            \"created_date\": \"2021-02-27T19:41:52.736152Z\",\n            \"updated_date\": \"2021-02-27T19:41:52.736170Z\",\n            \"userInfo\": \"In Your Localstorage\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les stories des autres utilisateurs sauf moi",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDYzNDQwLCJqdGkiOiJjN2U4YWIwYzVhOGE0OTUzYjNmYWZjNjA3NjExMTRmZCIsInVzZXJfaWQiOjE0fQ.B-UMTw7IVefb0fu9NKO3IsMpkINnynv5BqzaieK2nOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/stories/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stories",
+								""
+							]
+						},
+						"description": "Récupérer les stories des autres utilisateurs sauf les miennes vu qu'il existe un endpoint spécial pour récupérer les miennes"
+					},
+					"response": [
+						{
+							"name": "Récupérer les stories des autres utilisateurs sauf moi",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/stories/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"stories",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 20:51:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "481"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"text\": \"Kodjo story\",\n            \"media\": \"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n            \"created_date\": \"2021-02-27T20:11:45.569297Z\",\n            \"updated_date\": \"2021-02-27T20:11:45.569314Z\",\n            \"userInfo\": {\n                \"id\": 15,\n                \"first_name\": \"kodjo@kodjo.kodjo\",\n                \"last_name\": \"kodjo@kodjo.kodjo\",\n                \"phone\": \"12345678098\",\n                \"email\": \"kodjo@kodjo.kodjo\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Supprimer une storie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDYzNDQwLCJqdGkiOiJjN2U4YWIwYzVhOGE0OTUzYjNmYWZjNjA3NjExMTRmZCIsInVzZXJfaWQiOjE0fQ.B-UMTw7IVefb0fu9NKO3IsMpkINnynv5BqzaieK2nOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/stories/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stories",
+								"1",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Récupérer une storie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDYzNDQwLCJqdGkiOiJjN2U4YWIwYzVhOGE0OTUzYjNmYWZjNjA3NjExMTRmZCIsInVzZXJfaWQiOjE0fQ.B-UMTw7IVefb0fu9NKO3IsMpkINnynv5BqzaieK2nOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/stories/3/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stories",
+								"3",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer une storie",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/stories/3/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"stories",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:04:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "429"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"text\": \"Kodjo story\",\n    \"media\": \"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n    \"created_date\": \"2021-02-27T20:11:45.569297Z\",\n    \"updated_date\": \"2021-02-27T20:11:45.569314Z\",\n    \"userInfo\": {\n        \"id\": 15,\n        \"first_name\": \"kodjo@kodjo.kodjo\",\n        \"last_name\": \"kodjo@kodjo.kodjo\",\n        \"phone\": \"12345678098\",\n        \"email\": \"kodjo@kodjo.kodjo\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"avatar\": null,\n        \"city\": null,\n        \"longitude\": null,\n        \"latitude\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les stories d'un utilisateur quelconque",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3MzAyLCJqdGkiOiI2MDAyMDA2YWQxYWY0NWNiYWVmMmUwMDg4OTQ3YmIwMyIsInVzZXJfaWQiOjJ9.K7pNZizPHNfNBQEgzviHZCzvMe_hvHjCCG2CO7e_Cr0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/stories?user__id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"stories"
+							],
+							"query": [
+								{
+									"key": "user__id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Récupérer les stories d'un utilisateur quelconque"
+					},
+					"response": [
+						{
+							"name": "Récupérer les stories d'un utilisateur quelconque",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/stories?user__id=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"stories"
+									],
+									"query": [
+										{
+											"key": "user__id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 22:53:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "954"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 34,\n            \"text\": \"Memento mori 2\",\n            \"media\": \"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n            \"isVideo\": false,\n            \"created_date\": \"2021-02-28T22:49:51.038641Z\",\n            \"updated_date\": \"2021-02-28T22:49:51.038661Z\",\n            \"userInfo\": {\n                \"id\": 1,\n                \"first_name\": \"sender@sender.sender\",\n                \"last_name\": \"sender@sender.sender\",\n                \"phone\": \"12345\",\n                \"email\": \"sender@sender.sender\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null\n            }\n        },\n        {\n            \"id\": 1,\n            \"text\": \"Memento mori 2\",\n            \"media\": \"https://pursuedbytruthblog.files.wordpress.com/2018/09/memento-mori-only2.png\",\n            \"isVideo\": false,\n            \"created_date\": \"2021-02-28T22:45:25.066878Z\",\n            \"updated_date\": \"2021-02-28T22:45:25.066897Z\",\n            \"userInfo\": {\n                \"id\": 1,\n                \"first_name\": \"sender@sender.sender\",\n                \"last_name\": \"sender@sender.sender\",\n                \"phone\": \"12345\",\n                \"email\": \"sender@sender.sender\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "réseaux sociaux",
+			"item": [
+				{
+					"name": "Récupérer la liste de tous les réseaux sociaux supportés par la plateforme",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/networks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"networks",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer la liste de tous les réseaux sociaux supportés par la plateforme",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/networks/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"networks",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:17:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1245"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 9,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 9,\n            \"platform\": \"tiktok\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.294639Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.294679Z\"\n        },\n        {\n            \"id\": 8,\n            \"platform\": \"linkedin\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.291574Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.291605Z\"\n        },\n        {\n            \"id\": 7,\n            \"platform\": \"twitter\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.288887Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.288926Z\"\n        },\n        {\n            \"id\": 6,\n            \"platform\": \"snapchat\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.285646Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.285684Z\"\n        },\n        {\n            \"id\": 5,\n            \"platform\": \"youtube\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.282743Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.282774Z\"\n        },\n        {\n            \"id\": 4,\n            \"platform\": \"telegram\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.280265Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.280296Z\"\n        },\n        {\n            \"id\": 3,\n            \"platform\": \"whatsapp\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.277733Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.277764Z\"\n        },\n        {\n            \"id\": 2,\n            \"platform\": \"instagram\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.275112Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.275149Z\"\n        },\n        {\n            \"id\": 1,\n            \"platform\": \"facebook\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.264699Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.264717Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Récupérer la liste de tous les réseaux sociaux supportés par la plateforme",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/networks/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"networks",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:17:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1245"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 9,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 9,\n            \"platform\": \"tiktok\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.294639Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.294679Z\"\n        },\n        {\n            \"id\": 8,\n            \"platform\": \"linkedin\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.291574Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.291605Z\"\n        },\n        {\n            \"id\": 7,\n            \"platform\": \"twitter\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.288887Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.288926Z\"\n        },\n        {\n            \"id\": 6,\n            \"platform\": \"snapchat\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.285646Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.285684Z\"\n        },\n        {\n            \"id\": 5,\n            \"platform\": \"youtube\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.282743Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.282774Z\"\n        },\n        {\n            \"id\": 4,\n            \"platform\": \"telegram\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.280265Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.280296Z\"\n        },\n        {\n            \"id\": 3,\n            \"platform\": \"whatsapp\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.277733Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.277764Z\"\n        },\n        {\n            \"id\": 2,\n            \"platform\": \"instagram\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.275112Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.275149Z\"\n        },\n        {\n            \"id\": 1,\n            \"platform\": \"facebook\",\n            \"logo\": null,\n            \"created_date\": \"2021-02-27T21:16:07.264699Z\",\n            \"updated_date\": \"2021-02-27T21:16:07.264717Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Ajouter un identifiant de compte social",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NjgzMjUwLCJqdGkiOiJlZjU4ZjFmOGQwZjY0ZjQ4OTVmMzVmYjJkMTRhODFkMSIsInVzZXJfaWQiOjcwfQ.FFqC8C023k3zvUYQRMBewVjfZfJxnQmg1hfqKmOwx5M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier\":\"senderfacebook\",\n    \"network\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/social-accounts/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"social-accounts",
+								""
+							]
+						},
+						"description": "Configurer un compte social pour un utilisateur"
+					},
+					"response": [
+						{
+							"name": "Ajouter un identifiant de compte social",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"identifier\":\"jacobonfacebook\",\n    \"network\":\"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/social-accounts/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-accounts",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:29:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"network\": 1,\n    \"identifier\": \"jacobonfacebook\",\n    \"created_date\": \"2021-02-27T21:29:43.235622Z\",\n    \"updated_date\": \"2021-02-27T21:29:43.235640Z\",\n    \"networkInfo\": \"facebook\"\n}"
+						},
+						{
+							"name": "Ajouter un identifiant de compte social",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"identifier\":\"jacobonfacebook\",\n    \"network\":\"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/social-accounts/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-accounts",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:29:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"network\": 1,\n    \"identifier\": \"jacobonfacebook\",\n    \"created_date\": \"2021-02-27T21:29:43.235622Z\",\n    \"updated_date\": \"2021-02-27T21:29:43.235640Z\",\n    \"networkInfo\": \"facebook\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer tous les comptes sociaux de l'utilisateur en cours",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3MzAyLCJqdGkiOiI2MDAyMDA2YWQxYWY0NWNiYWVmMmUwMDg4OTQ3YmIwMyIsInVzZXJfaWQiOjJ9.K7pNZizPHNfNBQEgzviHZCzvMe_hvHjCCG2CO7e_Cr0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/social-accounts/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"social-accounts",
+								"me",
+								""
+							]
+						},
+						"description": "Récupérer tous mes comptes sociaux"
+					},
+					"response": [
+						{
+							"name": "Récupérer tous les comptes sociaux de l'utilisateur en cours",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/social-accounts/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-accounts",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:39:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "225"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"network\": 1,\n            \"identifier\": \"jacobonfacebookupdated\",\n            \"created_date\": \"2021-02-27T21:29:43.235622Z\",\n            \"updated_date\": \"2021-02-27T21:37:53.614148Z\",\n            \"networkInfo\": \"facebook\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Modifier un identifiant de réseau social",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDYzNDQwLCJqdGkiOiJjN2U4YWIwYzVhOGE0OTUzYjNmYWZjNjA3NjExMTRmZCIsInVzZXJfaWQiOjE0fQ.B-UMTw7IVefb0fu9NKO3IsMpkINnynv5BqzaieK2nOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"identifier\":\"jacobonfacebookupdated\",\n    \"network\":\"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/social-accounts/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"social-accounts",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Modifier un identifiant de réseau social",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"identifier\":\"jacobonfacebookupdated\",\n    \"network\":\"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/social-accounts/1/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-accounts",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:37:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"network\": 1,\n    \"identifier\": \"jacobonfacebookupdated\",\n    \"created_date\": \"2021-02-27T21:29:43.235622Z\",\n    \"updated_date\": \"2021-02-27T21:37:53.614148Z\",\n    \"networkInfo\": \"facebook\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer la liste de tous les identifiants de comptes sociaux",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDkzNTc4LCJqdGkiOiJkMGU3ZjViZTRhNTQ0ZDY4ODE5NTQ3NzVlNGU3ZmY0NiIsInVzZXJfaWQiOjIwfQ.S2P4yqJ5R6DCkerhrsKzlQsRORNwLavd62SJaqbpYU0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/social-accounts/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"social-accounts",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer la liste de tous les identifiants de comptes sociaux",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/social-accounts/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"social-accounts",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 27 Feb 2021 21:57:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "638"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 2,\n            \"network\": 2,\n            \"identifier\": \"kodjooninstagram\",\n            \"created_date\": \"2021-02-27T21:53:13.743338Z\",\n            \"updated_date\": \"2021-02-27T21:53:13.743355Z\",\n            \"networkInfo\": \"instagram\",\n            \"userInfo\": {\n                \"id\": 15,\n                \"first_name\": \"kodjo@kodjo.kodjo\",\n                \"last_name\": \"kodjo@kodjo.kodjo\",\n                \"phone\": \"12345678098\",\n                \"email\": \"kodjo@kodjo.kodjo\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null\n            }\n        },\n        {\n            \"id\": 1,\n            \"network\": 1,\n            \"identifier\": \"jacobonfacebookupdated\",\n            \"created_date\": \"2021-02-27T21:29:43.235622Z\",\n            \"updated_date\": \"2021-02-27T21:37:53.614148Z\",\n            \"networkInfo\": \"facebook\",\n            \"userInfo\": \"It's you\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "contacts",
+			"item": [
+				{
+					"name": "Récupérer la liste de mes contacts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3Mjc2LCJqdGkiOiI5NmMwY2NiODkwNDE0ZTI4YTM1ZmI4YmJiMzg0NTg1ZSIsInVzZXJfaWQiOjF9.6rawAGKbeYtWS2c8JyAzOKuqOTmSZpol6kLz5dHrC2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/contacts/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								"me",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer la liste de mes contacts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/contacts/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contacts",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:37:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "534"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 34,\n            \"socialaccount\": 1,\n            \"user\": 1,\n            \"created_date\": \"2021-02-28T23:36:56.267258Z\",\n            \"updated_date\": \"2021-02-28T23:36:56.267277Z\",\n            \"socialAccountInfo\": {\n                \"contactInfo\": {\n                    \"id\": 2,\n                    \"first_name\": \"receiver@receiver.receiver\",\n                    \"last_name\": \"receiver@receiver.receiver\",\n                    \"phone\": \"099999999987\",\n                    \"email\": \"receiver@receiver.receiver\",\n                    \"bio\": null,\n                    \"birthday\": null,\n                    \"avatar\": null,\n                    \"city\": null,\n                    \"longitude\": null,\n                    \"latitude\": null\n                },\n                \"contactSocialAccountInfo\": {\n                    \"identifier\": \"receiverfacebook\",\n                    \"network\": \"facebook\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "notifications",
+			"item": [
+				{
+					"name": "Récupérer les notifications de réactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3Mjc2LCJqdGkiOiI5NmMwY2NiODkwNDE0ZTI4YTM1ZmI4YmJiMzg0NTg1ZSIsInVzZXJfaWQiOjF9.6rawAGKbeYtWS2c8JyAzOKuqOTmSZpol6kLz5dHrC2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/notifications/me/?type=reacted",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"me",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "reacted"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer les notifications de réactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/notifications/me/?type=reacted",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"notifications",
+										"me",
+										""
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "reacted"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:14:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "899"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 34,\n            \"isReceived\": false,\n            \"relationship\": 1,\n            \"message\": \"REACTION\",\n            \"created_date\": \"2021-02-28T23:11:01.523080Z\",\n            \"updated_date\": \"2021-02-28T23:11:01.523097Z\",\n            \"relationshipInfo\": {\n                \"sender\": {\n                    \"id\": 1,\n                    \"first_name\": \"sender@sender.sender\",\n                    \"last_name\": \"sender@sender.sender\",\n                    \"phone\": \"12345\",\n                    \"email\": \"sender@sender.sender\",\n                    \"bio\": null,\n                    \"birthday\": null,\n                    \"avatar\": null,\n                    \"city\": null,\n                    \"longitude\": null,\n                    \"latitude\": null\n                },\n                \"receiver\": {\n                    \"id\": 2,\n                    \"first_name\": \"receiver@receiver.receiver\",\n                    \"last_name\": \"receiver@receiver.receiver\",\n                    \"phone\": \"099999999987\",\n                    \"email\": \"receiver@receiver.receiver\",\n                    \"bio\": null,\n                    \"birthday\": null,\n                    \"avatar\": null,\n                    \"city\": null,\n                    \"longitude\": null,\n                    \"latitude\": null\n                },\n                \"relationship\": {\n                    \"id\": 1,\n                    \"receiver\": 2,\n                    \"message\": \"False\",\n                    \"socialaccount\": 1,\n                    \"isReacted\": true,\n                    \"isAccepted\": false,\n                    \"created_date\": \"2021-02-28T23:02:05.799687Z\",\n                    \"updated_date\": \"2021-02-28T23:11:01.520449Z\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les notifications d'acceptation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3Mjc2LCJqdGkiOiI5NmMwY2NiODkwNDE0ZTI4YTM1ZmI4YmJiMzg0NTg1ZSIsInVzZXJfaWQiOjF9.6rawAGKbeYtWS2c8JyAzOKuqOTmSZpol6kLz5dHrC2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/notifications/me/?type=accepted",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"me",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "accepted"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer les notifications d'acceptation",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/notifications/me/?type=accepted",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"notifications",
+										"me",
+										""
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "accepted"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:16:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "900"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 35,\n            \"isReceived\": false,\n            \"relationship\": 1,\n            \"message\": \"ACCEPTANCE\",\n            \"created_date\": \"2021-02-28T23:15:10.078976Z\",\n            \"updated_date\": \"2021-02-28T23:15:10.078993Z\",\n            \"relationshipInfo\": {\n                \"sender\": {\n                    \"id\": 1,\n                    \"first_name\": \"sender@sender.sender\",\n                    \"last_name\": \"sender@sender.sender\",\n                    \"phone\": \"12345\",\n                    \"email\": \"sender@sender.sender\",\n                    \"bio\": null,\n                    \"birthday\": null,\n                    \"avatar\": null,\n                    \"city\": null,\n                    \"longitude\": null,\n                    \"latitude\": null\n                },\n                \"receiver\": {\n                    \"id\": 2,\n                    \"first_name\": \"receiver@receiver.receiver\",\n                    \"last_name\": \"receiver@receiver.receiver\",\n                    \"phone\": \"099999999987\",\n                    \"email\": \"receiver@receiver.receiver\",\n                    \"bio\": null,\n                    \"birthday\": null,\n                    \"avatar\": null,\n                    \"city\": null,\n                    \"longitude\": null,\n                    \"latitude\": null\n                },\n                \"relationship\": {\n                    \"id\": 1,\n                    \"receiver\": 2,\n                    \"message\": \"False\",\n                    \"socialaccount\": 1,\n                    \"isReacted\": true,\n                    \"isAccepted\": true,\n                    \"created_date\": \"2021-02-28T23:02:05.799687Z\",\n                    \"updated_date\": \"2021-02-28T23:15:10.076692Z\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les notifications de rejet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NDkzNTc4LCJqdGkiOiJkMGU3ZjViZTRhNTQ0ZDY4ODE5NTQ3NzVlNGU3ZmY0NiIsInVzZXJfaWQiOjIwfQ.S2P4yqJ5R6DCkerhrsKzlQsRORNwLavd62SJaqbpYU0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/notifications/me/?type=rejected",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"me",
+								""
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "rejected"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer les notifications de réactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/notifications/me/?type=reacted",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"notifications",
+										"me",
+										""
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "reacted"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 02:28:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 18,\n            \"isReceived\": false,\n            \"relationship\": 7,\n            \"message\": \"REACTION\",\n            \"created_date\": \"2021-02-28T02:27:09.591867Z\",\n            \"updated_date\": \"2021-02-28T02:27:09.591884Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Récupérer les notifications de réactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/notifications/me/?type=reacted",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"notifications",
+										"me",
+										""
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "reacted"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 02:39:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.9.0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "208"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 20,\n            \"isReceived\": false,\n            \"relationship\": 8,\n            \"message\": \"REACTION\",\n            \"created_date\": \"2021-02-28T02:31:49.359156Z\",\n            \"updated_date\": \"2021-02-28T02:31:49.359174Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les notifications de demande de relationships non encore reçues",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3MzAyLCJqdGkiOiI2MDAyMDA2YWQxYWY0NWNiYWVmMmUwMDg4OTQ3YmIwMyIsInVzZXJfaWQiOjJ9.K7pNZizPHNfNBQEgzviHZCzvMe_hvHjCCG2CO7e_Cr0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/notifications/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"me",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer les notifications de demande de relationships non encore reçues",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/notifications/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"notifications",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:09:11 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "900"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"isReceived\": false,\n            \"relationship\": 1,\n            \"message\": \"RECEPTION\",\n            \"created_date\": \"2021-02-28T23:02:05.802128Z\",\n            \"updated_date\": \"2021-02-28T23:02:05.802146Z\",\n            \"relationshipInfo\": {\n                \"sender\": {\n                    \"id\": 1,\n                    \"first_name\": \"sender@sender.sender\",\n                    \"last_name\": \"sender@sender.sender\",\n                    \"phone\": \"12345\",\n                    \"email\": \"sender@sender.sender\",\n                    \"bio\": null,\n                    \"birthday\": null,\n                    \"avatar\": null,\n                    \"city\": null,\n                    \"longitude\": null,\n                    \"latitude\": null\n                },\n                \"receiver\": {\n                    \"id\": 2,\n                    \"first_name\": \"receiver@receiver.receiver\",\n                    \"last_name\": \"receiver@receiver.receiver\",\n                    \"phone\": \"099999999987\",\n                    \"email\": \"receiver@receiver.receiver\",\n                    \"bio\": null,\n                    \"birthday\": null,\n                    \"avatar\": null,\n                    \"city\": null,\n                    \"longitude\": null,\n                    \"latitude\": null\n                },\n                \"relationship\": {\n                    \"id\": 1,\n                    \"receiver\": 2,\n                    \"message\": \"False\",\n                    \"socialaccount\": 1,\n                    \"isReacted\": false,\n                    \"isAccepted\": false,\n                    \"created_date\": \"2021-02-28T23:02:05.799687Z\",\n                    \"updated_date\": \"2021-02-28T23:02:05.799707Z\"\n                }\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Marquer une notification comme reçue",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3MzAyLCJqdGkiOiI2MDAyMDA2YWQxYWY0NWNiYWVmMmUwMDg4OTQ3YmIwMyIsInVzZXJfaWQiOjJ9.K7pNZizPHNfNBQEgzviHZCzvMe_hvHjCCG2CO7e_Cr0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isReceived\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/notifications/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Marquer une notification comme reçue",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"isReceived\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/notifications/1/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"notifications",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:12:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "846"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"isReceived\": true,\n    \"relationship\": 1,\n    \"message\": \"RECEPTION\",\n    \"created_date\": \"2021-02-28T23:02:05.802128Z\",\n    \"updated_date\": \"2021-02-28T23:12:45.415022Z\",\n    \"relationshipInfo\": {\n        \"sender\": {\n            \"id\": 1,\n            \"first_name\": \"sender@sender.sender\",\n            \"last_name\": \"sender@sender.sender\",\n            \"phone\": \"12345\",\n            \"email\": \"sender@sender.sender\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null\n        },\n        \"receiver\": {\n            \"id\": 2,\n            \"first_name\": \"receiver@receiver.receiver\",\n            \"last_name\": \"receiver@receiver.receiver\",\n            \"phone\": \"099999999987\",\n            \"email\": \"receiver@receiver.receiver\",\n            \"bio\": null,\n            \"birthday\": null,\n            \"avatar\": null,\n            \"city\": null,\n            \"longitude\": null,\n            \"latitude\": null\n        },\n        \"relationship\": {\n            \"id\": 1,\n            \"receiver\": 2,\n            \"message\": \"False\",\n            \"socialaccount\": 1,\n            \"isReacted\": true,\n            \"isAccepted\": false,\n            \"created_date\": \"2021-02-28T23:02:05.799687Z\",\n            \"updated_date\": \"2021-02-28T23:11:01.520449Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "demande de relations",
+			"item": [
+				{
+					"name": "Envoyer une demande",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3Mjc2LCJqdGkiOiI5NmMwY2NiODkwNDE0ZTI4YTM1ZmI4YmJiMzg0NTg1ZSIsInVzZXJfaWQiOjF9.6rawAGKbeYtWS2c8JyAzOKuqOTmSZpol6kLz5dHrC2U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"receiver\": 2,\n    \"socialaccount\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/relationships/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"relationships",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Envoyer une demande",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"receiver\": 2,\n    \"socialaccount\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/relationships/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"relationships",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:02:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"receiver\": 2,\n    \"message\": \"False\",\n    \"socialaccount\": 1,\n    \"isReacted\": false,\n    \"isAccepted\": false,\n    \"created_date\": \"2021-02-28T23:02:05.799687Z\",\n    \"updated_date\": \"2021-02-28T23:02:05.799707Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Reagir à une demande en tant que receiver",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3MzAyLCJqdGkiOiI2MDAyMDA2YWQxYWY0NWNiYWVmMmUwMDg4OTQ3YmIwMyIsInVzZXJfaWQiOjJ9.K7pNZizPHNfNBQEgzviHZCzvMe_hvHjCCG2CO7e_Cr0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isReacted\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/relationships/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"relationships",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Reagir à une demande en tant que receiver",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"isReacted\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/relationships/1/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"relationships",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:11:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"receiver\": 2,\n    \"message\": \"False\",\n    \"socialaccount\": 1,\n    \"isReacted\": true,\n    \"isAccepted\": false,\n    \"created_date\": \"2021-02-28T23:02:05.799687Z\",\n    \"updated_date\": \"2021-02-28T23:11:01.520449Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Accepter / Refuser une demande",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0NTY3MzAyLCJqdGkiOiI2MDAyMDA2YWQxYWY0NWNiYWVmMmUwMDg4OTQ3YmIwMyIsInVzZXJfaWQiOjJ9.K7pNZizPHNfNBQEgzviHZCzvMe_hvHjCCG2CO7e_Cr0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isAccepted\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/relationships/1/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"relationships",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Accepter / Refuser une demande",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"isAccepted\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/relationships/1/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"relationships",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Feb 2021 23:15:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"receiver\": 2,\n    \"message\": \"False\",\n    \"socialaccount\": 1,\n    \"isReacted\": true,\n    \"isAccepted\": true,\n    \"created_date\": \"2021-02-28T23:02:05.799687Z\",\n    \"updated_date\": \"2021-02-28T23:15:10.076692Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "likes",
+			"item": [
+				{
+					"name": "Liker quelqu'un",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0Njk4OTkxLCJqdGkiOiJjYmFiZjZmZGZmOGQ0ZWI5OGYwMmZhYTQ4YzFjMzc4ZSIsInVzZXJfaWQiOjEzNH0.8-Y7rUo_lu7WDvyl8cvpkjgqVkeB4bUOSZUjI1WbKog",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"likee\": 135\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/likes/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"likes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Liker quelqu'un",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"likee\": 135\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/v1/likes/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"likes",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 11:26:30 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "605"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"likee\": 135,\n    \"likeeInfo\": {\n        \"id\": 135,\n        \"username\": \"likee\",\n        \"profession\": null,\n        \"first_name\": \"10\",\n        \"last_name\": \"10\",\n        \"phone\": \"10\",\n        \"email\": \"likee@likee.com\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"avatar\": null,\n        \"city\": null,\n        \"longitude\": null,\n        \"latitude\": null,\n        \"age\": \"\",\n        \"networks\": []\n    },\n    \"liker\": 134,\n    \"likerInfo\": {\n        \"id\": 134,\n        \"username\": \"liker\",\n        \"profession\": null,\n        \"first_name\": \"9\",\n        \"last_name\": \"9\",\n        \"phone\": \"9\",\n        \"email\": \"liker@liker.com\",\n        \"bio\": null,\n        \"birthday\": null,\n        \"avatar\": null,\n        \"city\": null,\n        \"longitude\": null,\n        \"latitude\": null,\n        \"age\": \"\",\n        \"networks\": []\n    },\n    \"created_date\": \"2021-03-02T11:26:30.615419Z\",\n    \"updated_date\": \"2021-03-02T11:26:30.615438Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer mes likes (likes reçues)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0Njk5MDIxLCJqdGkiOiJkYjU3NTJiMGFiMTQ0NTY5YmEzZjhlMDdlMjA4ZjNmYiIsInVzZXJfaWQiOjEzNX0.HbLRS4fq2g0gh4DaOK0dJYlHNu8HkdOhPikmrR7EUMc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/likes/me/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"likes",
+								"me",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer mes likes (likes reçues)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/likes/me/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"likes",
+										"me",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 11:29:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "657"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"likee\": 135,\n            \"likeeInfo\": {\n                \"id\": 135,\n                \"username\": \"likee\",\n                \"profession\": null,\n                \"first_name\": \"10\",\n                \"last_name\": \"10\",\n                \"phone\": \"10\",\n                \"email\": \"likee@likee.com\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null,\n                \"age\": \"\",\n                \"networks\": []\n            },\n            \"liker\": 134,\n            \"likerInfo\": {\n                \"id\": 134,\n                \"username\": \"liker\",\n                \"profession\": null,\n                \"first_name\": \"9\",\n                \"last_name\": \"9\",\n                \"phone\": \"9\",\n                \"email\": \"liker@liker.com\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null,\n                \"age\": \"\",\n                \"networks\": []\n            },\n            \"created_date\": \"2021-03-02T11:27:52.602234Z\",\n            \"updated_date\": \"2021-03-02T11:27:52.602254Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les likes de quelqu'un d'autre",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0Njk4OTkxLCJqdGkiOiJjYmFiZjZmZGZmOGQ0ZWI5OGYwMmZhYTQ4YzFjMzc4ZSIsInVzZXJfaWQiOjEzNH0.8-Y7rUo_lu7WDvyl8cvpkjgqVkeB4bUOSZUjI1WbKog",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/likes/?likee__id=135",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"likes",
+								""
+							],
+							"query": [
+								{
+									"key": "likee__id",
+									"value": "135"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Récupérer les likes de quelqu'un d'autre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/likes/?likee__id=135",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"likes",
+										""
+									],
+									"query": [
+										{
+											"key": "likee__id",
+											"value": "135"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 11:31:33 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "657"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"likee\": 135,\n            \"likeeInfo\": {\n                \"id\": 135,\n                \"username\": \"likee\",\n                \"profession\": null,\n                \"first_name\": \"10\",\n                \"last_name\": \"10\",\n                \"phone\": \"10\",\n                \"email\": \"likee@likee.com\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null,\n                \"age\": \"\",\n                \"networks\": []\n            },\n            \"liker\": 134,\n            \"likerInfo\": {\n                \"id\": 134,\n                \"username\": \"liker\",\n                \"profession\": null,\n                \"first_name\": \"9\",\n                \"last_name\": \"9\",\n                \"phone\": \"9\",\n                \"email\": \"liker@liker.com\",\n                \"bio\": null,\n                \"birthday\": null,\n                \"avatar\": null,\n                \"city\": null,\n                \"longitude\": null,\n                \"latitude\": null,\n                \"age\": \"\",\n                \"networks\": []\n            },\n            \"created_date\": \"2021-03-02T11:27:52.602234Z\",\n            \"updated_date\": \"2021-03-02T11:27:52.602254Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Récupérer les likes que j'ai faites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0Njk4OTkxLCJqdGkiOiJjYmFiZjZmZGZmOGQ0ZWI5OGYwMmZhYTQ4YzFjMzc4ZSIsInVzZXJfaWQiOjEzNH0.8-Y7rUo_lu7WDvyl8cvpkjgqVkeB4bUOSZUjI1WbKog",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/likes/?liker__id=134",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"likes",
+								""
+							],
+							"query": [
+								{
+									"key": "liker__id",
+									"value": "134"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unliker quelqu'un (retirer un like)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE0Njk4OTkxLCJqdGkiOiJjYmFiZjZmZGZmOGQ0ZWI5OGYwMmZhYTQ4YzFjMzc4ZSIsInVzZXJfaWQiOjEzNH0.8-Y7rUo_lu7WDvyl8cvpkjgqVkeB4bUOSZUjI1WbKog",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/likes/3/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"likes",
+								"3",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unliker quelqu'un (retirer un like)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/v1/likes/3/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"likes",
+										"3",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.19.7"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 02 Mar 2021 11:36:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Origin"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://161.35.223.149:8000"
+		}
+	]
+}
